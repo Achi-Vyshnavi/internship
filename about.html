@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EduNexus</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #333;
+        }
+        .header img {
+            width: 60px; /* Adjust width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Adjust spacing between logo and text */
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            background-color: #fff;
+        }
+        .section.intro {
+            background-color: #f9f5ee;
+        }
+        .section.history {
+            background-color: #f1edf1;
+        }
+        .section.usp {
+            background-color: #e9f0e9;
+        }
+        .section.team {
+            background-color: #feabc912;
+            overflow: hidden;
+        }
+        .section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        .section p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        .mission p:last-child {
+            margin-bottom: 0;
+        }
+        .history img {
+            width: 100%;
+            height: auto;
+            margin-top: 15px;
+            border-radius: 8px;
+        }
+        .explore-more {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .explore-more a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            background-color: #d4d179;
+            color: #0e0a0a;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .explore-more a:hover {
+            background-color: #f4f5f0;
+        }
+        .team-members-wrapper {
+            position: relative;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+        .team-members {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .team-member {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            flex: 1 0 100%; /* Adjust based on the number of items visible */
+            box-sizing: border-box;
+            min-width: 300px; /* Minimum width of each team member card */
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .team-member h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .team-member h4 {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        .team-member p {
+            font-size: 14px;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+        .slider-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            z-index: 1;
+        }
+        .slider-arrow {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .slider-arrow:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(126, 114, 114, 0.1);
+        }
+        .section.contact {
+            background-color: #92979b;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .social-icons a {
+            display: inline-block;
+            color: #8c8f93;
+            font-size: 24px;
+            margin-right: 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #272829;
+        }
+        .email-subscription {
+            display: flex;
+            align-items: center;
+        }
+        .email-input {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 250px;
+            font-size: 14px;
+        }
+        .subscribe-button {
+            padding: 10px 20px;
+            background-color: #4c4e50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .subscribe-button:hover {
+            background-color: #a3a5a7;
+        }
+        .social-icons a {
+            display: inline-block;
+            margin-right: 10px;
+            transition: opacity 0.3s ease;
+        }
+        .social-icons a img {
+            width: 32px; /* Adjust size as needed */
+            height: 32px;
+            border-radius: 50%; /* For circular logos */
+        }
+        .social-icons a:hover {
+            opacity: 0.7;
+            background-color: #aaaeb2;
+        }
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-button a {
+            background-color: #4b4e52;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button a:hover {
+            background-color: #cdd0d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <div class="header">
+                <img src="logo1.jpg" alt="EduNexus Logo">
+        <div class="header">
+            <h1>About Us - EduNexus</h1>
+        </div>
+        <div class="section intro">
+            <p>EduNexus emerged from a collective vision to redefine learning in the digital age. Established in 2019 by a group of dedicated educators and technology enthusiasts, EduNexus was born out of a deep-seated belief that education should be accessible, engaging, and transformative for everyone, regardless of geographical location or socioeconomic background.</p>
+            <p>The founding team of EduNexus shared a common frustration with the limitations of traditional educational models and saw an opportunity to leverage technology to create a more inclusive learning experience. Drawing inspiration from their own diverse academic and professional backgrounds, they set out to build a platform that would not only deliver high-quality educational content but also foster a supportive community where learners could thrive and grow.</p>
+            </div>
+        </div>
+        <div class="section history">
+            <h2>Our History</h2>
+            <p>Since its inception, EduNexus has been committed to pushing the boundaries of online education. Over the years, we have continuously evolved to meet the changing needs of learners and educators alike. From humble beginnings to becoming a leading provider of innovative learning solutions, EduNexus has grown into a trusted name in the e-learning industry.</p>
+            <div class="explore-more">
+                <a href="#">Explore More</a>
+            </div>
+        </div>
+        <div class="section usp">
+            <h2>Our Unique Selling Proposition (USP)</h2>
+            <p>At EduNexus, our unique selling proposition lies in our commitment to personalized learning experiences and cutting-edge technology. We combine interactive course content with adaptive learning technologies to cater to diverse learning styles and preferences. Our platform offers flexibility and accessibility, allowing learners to study anytime, anywhere, and at their own pace.</p>
+            <p>Furthermore, EduNexus stands out for its strong partnerships with leading educational institutions and industry experts, ensuring that our courses are relevant, up-to-date, and aligned with current industry trends and standards.</p>
+            <div class="explore-more">
+                <a href="#">Explore More</a>
+            </div>
+        </div>
+        <div class="section team">
+            <h2>Our Team</h2>
+            <p>Our dedicated team at EduNexus is composed of passionate educators, technologists, and innovators. Together, they drive the mission of making education accessible and engaging for everyone. Meet the people who make EduNexus possible!</p>
+            <div class="team-members-wrapper">
+                <div class="slider-controls">
+                    <div class="slider-arrow prev" onclick="moveSlider('prev')">&#10094;</div>
+                    <div class="slider-arrow next" onclick="moveSlider('next')">&#10095;</div>
+                </div>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="m1.jpg" alt="John Doe">
+                        <h3>John Doe</h3>
+                        <h4>Chief Executive Officer (CEO)</h4>
+                        <p>"As the CEO and co-founder of EduNexus, I've always believed in the transformative power of education. With over 20 years in the education technology sector, my goal is to create a platform that breaks down barriers to learning and empowers individuals worldwide."</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="f1.jpg" alt="Jane Smith">
+                        <h3>Jane Smith</h3>
+                        <h4>Chief Technology Officer (CTO)</h4>
+                        <p>"Joining EduNexus 5 years ago was one of the best decisions I've made. As a tech enthusiast with a background in software development and AI, I am passionate about building innovative solutions that enhance personalized learning experiences for our users."</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="f2.jpg" alt="Emily Johnson">
+                        <h3>Emily Johnson</h3>
+                        <h4>Head of Content Development</h4>
+                        <p>"With over a decade of experience in curriculum design and educational content creation, I am thrilled to lead a team that produces engaging and interactive courses. At EduNexus, we are dedicated to making learning not just informative, but also fun and accessible."</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="m2.jpg" alt="Michael Brown">
+                        <h3>Michael Brown</h3>
+                        <h4>Director of Marketing</h4>
+                        <p>"Being part of EduNexus for the past 3 years has been an exciting journey. My expertise in digital marketing has allowed me to help this incredible platform reach a global audience, forming strong partnerships with educational institutions along the way."</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="f3.jpg" alt="Sarah Davis">
+                        <h3>Sarah Davis</h3>
+                        <h4>Community Manager</h4>
+                        <p>"I have been with EduNexus since its inception, and it has been a wonderful experience to see our community grow. My role is to ensure that our learners feel supported and connected, fostering a vibrant and inclusive learning environment."</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="m3.jpg" alt="David Wilson">
+                        <h3>David Wilson</h3>
+                        <h4>Senior Software Engineer</h4>
+                        <p>"I've been with EduNexus for 4 years now, and I love solving complex problems to improve our platform. It's rewarding to see how our work directly impacts the learning experiences of users worldwide, making education more accessible and seamless."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="social-icons">
+                    <a href="#" target="_blank" title="Follow us on Instagram"><img src="in.png" ></a>
+                    <a href="#" target="_blank" title="Connect with us on LinkedIn"><img src="l.jpg"></a>
+                    <a href="#" target="_blank" title="Follow us on Instagram"><img src="me.png" ></a>
+                    <a href="#" target="_blank" title="Follow us on Instagram"><img src="y.png" ></a>
+                </div>
+                <form class="email-subscription" action="#" method="post">
+                    <input type="email" class="email-input" placeholder="Your email address" required>
+                    <button type="submit" class="subscribe-button">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="index.html">Back</a>
+    </div>
+</div>
+    </div>
+
+    <script>
+        // Slider functionality
+        let slideIndex = 0;
+
+        function moveSlider(direction) {
+            const slides = document.querySelectorAll('.team-member');
+            const totalSlides = slides.length;
+
+            if (direction === 'next') {
+                slideIndex = (slideIndex + 1) % totalSlides;
+            } else if (direction === 'prev') {
+                slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+            }
+
+            const slideWidth = slides[0].offsetWidth;
+            const offset = -slideIndex * slideWidth;
+
+            document.querySelector('.team-members').style.transform = `translateX(${offset}px)`;
+        }
+    </script>
+</body>
+</html>

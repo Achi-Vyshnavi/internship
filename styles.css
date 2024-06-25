@@ -1,0 +1,214 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Fallback background color */
+}
+
+header {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 20px;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #0073e6;
+}
+
+header .btn {
+    background: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.welcome-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Adjust based on the number of slides */
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide:first-child {
+    background-size: cover;
+    background-position: center;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+.arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+.logo img {
+    width: 63px; /* Adjust the value as needed */
+    height: auto; /* This ensures the image maintains its aspect ratio */
+}
+
+
+
+.intro-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.intro-buttons a {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between links */
+    font-size: 18px; /* Adjust font size */
+    color: #333; /* Adjust text color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.intro-buttons a:hover {
+    color: #4a4e53; /* Change color on hover */
+}
+
+
+
+.icons-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background: #f4f4f4;
+    margin-top: 20px;
+}
+
+.icon-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.icon-box h3 {
+    font-size: 1.2rem;
+}
+
+.about-section {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.boxes-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.about-box {
+    text-align: center;
+    padding: 20px;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    margin: 20px;
+}
+
+.about-box img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+
+.about-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}

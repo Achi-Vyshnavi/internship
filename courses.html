@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - EduNexus</title>
+    <style>
+        /* Reset and basic styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center; /* Center logo vertically */
+            justify-content: center; /* Center logo horizontally */
+        }
+        .header h1 {
+            color: #333;
+            margin-left: 10px; /* Adjust spacing between logo and text */
+        }
+        .header img {
+            width: 60px; /* Adjust width of the logo */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Adjust spacing between logo and text */
+        }
+        .courses-section {
+            margin-bottom: 40px;
+        }
+        .courses-section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .course {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .course h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .course p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .course .price {
+            font-size: 18px;
+            color: #007BFF;
+            margin-bottom: 10px;
+        }
+        .course .original-price {
+            text-decoration: line-through;
+            color: #777;
+            margin-right: 5px;
+        }
+        .course .discount {
+            color: #28a745; /* Green color for discount */
+        }
+        .course .enroll-button {
+            background-color: #4b5b6c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Ensure button style */
+            display: inline-block; /* Ensure button style */
+        }
+        .course .enroll-button:hover {
+            background-color: #eaedf1;
+        }
+        .course img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .course:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        .course-container hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        .back-button {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-button a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .back-button a:hover {
+            background-color: #0056b3;
+        }
+        .discount-offer {
+    background-color: #acc6cf; /* Yellow background */
+    color: #333; /* Text color */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    animation: glow 1.5s infinite alternate; /* Example of glowing animation */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #465c5f;
+    }
+    to {
+        box-shadow: 0 0 20px #16f4f4;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="logo1.jpg" alt="EduNexus Logo">
+            <h1>Our Courses - EduNexus</h1>
+        </div>
+        
+        <!-- Popular Courses Section -->
+        <div class="courses-section">
+            <h2>Our Popular Courses</h2>
+            <div class="course-container">
+                <div class="course">
+                    <h3>Project Management</h3>
+                    <img src="pm.jpg" alt="Course 1 Image">
+                    <p>Description of the course goes here. This course covers various topics.</p>
+                    <p class="price"><span class="original-price">1200/-</span><span class="discount">Now 899/-</span></p>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3>Data Analysis with Python</h3>
+                    <img src="ds1.jpg" alt="Course 1 Image">
+                    <p>Description of the course goes here. This course covers various topics.</p>
+                    <p class="price"><span class="original-price">1800/-</span><span class="discount">Now 999/-</span></p>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3>Devops Automation</h3>
+                    <img src="c1.jpg" alt="Course 1 Image">
+                    <p>Description of the course goes here. This course covers various topics.</p>
+                    <p class="price"><span class="original-price">1990/-</span><span class="discount">Now 999/-</span></p>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3>Advanced Cloud Architecture</h3>
+                    <img src="cy.jpg" alt="Course 1 Image">
+                    <p>Description of the course goes here. This course covers various topics.</p>
+                    <p class="price"><span class="original-price">1990/-</span><span class="discount">Now 999/-</span></p>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3>Data Engineering</h3>
+                    <img src="b.jpg" alt="Course 1 Image">
+                    <p>Description of the course goes here. This course covers various topics.</p>
+                    <p class="price"><span class="original-price">1990/-</span><span class="discount">Now 999/-</span></p>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+                <div class="course">
+                    <h3>Devops</h3>
+                    <img src="d.jpg" alt="Course 1 Image">
+                    <p>Description of the course goes here. This course covers various topics.</p>
+                    <p class="price"><span class="original-price">1990/-</span><span class="discount">Now 999/-</span></p>
+                    <span class="discount-offer">Limited Time Discount Offer!</span>
+                    <a href="#" class="enroll-button">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- All Courses Section -->
+        <div class="courses-section">
+            <h2>All Courses</h2>
+            <div class="courses-section">
+                <h2>AI & Machine Learning</h2>
+                <div class="course-container">
+                    <div class="course">
+                        <h3>Machine Learning Algorithms</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹1290</span><span class="discount">Now ₹799</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Deep Learning Techniques</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹2000</span><span class="discount">Now ₹899</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Natural Language Processing</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹2500</span><span class="discount">Now ₹959</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Computer Vision</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹1000</span><span class="discount">Now ₹999</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Generative Adversarial Networks(GAN)</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹2900</span><span class="discount">Now ₹999</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Time Series Forecasting</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3500</span><span class="discount">Now ₹1500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Autonomous Vehicles and Robotics</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3500</span><span class="discount">Now ₹1550</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Speech Recognition</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹2900</span><span class="discount">Now ₹1200</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Neural Architecture Search</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3700</span><span class="discount">Now ₹2100</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Quantum Machine Learning</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3000</span><span class="discount">Now ₹899</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>AI-driven Chatbots</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Edge Computing in AI</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3800</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>AI Model Deployment</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2200</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Federated Learning</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2700</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Recommender Systems</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4200</span><span class="discount">Now ₹2900</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+
+                    <div class="course">
+                        <h3>AI for Healthcare</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹5500</span><span class="discount">Now ₹3500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Bayesian Networks</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹1000</span><span class="discount">Now ₹899</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>AI in Finance</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹2500</span><span class="discount">Now ₹789</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+            </div>
+            <div class="courses-section">
+                <h2>Data Science</h2>
+                <div class="course-container">
+                    <div class="course">
+                        <h3>Data Science Foundations</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Data Analysis with Python</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Statistical Modeling</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Predictive Analytics</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Data Warehousing</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3500</span><span class="discount">Now ₹1000</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Data Engineering</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Time Series Analysis</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Data Cleaning and Preprocessing</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Geospatial Data Analysis</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Data Science for Social Sciences</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Sports Analytics</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Customer Segmentation</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud-based Data Science</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Machine Learning for Data Scientists</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <!-- Add more Data Science courses as needed -->
+                </div>
+            </div>
+            <div class="courses-section">
+                <h2>DevOps</h2>
+                <div class="course-container">
+                    <div class="course">
+                        <h3>Introduction to DevOps</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹2000</span><span class="discount">Now ₹999</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevOps Automation</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹3000</span><span class="discount">Now ₹1200</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>nfrastructure as Code (IaC)</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Containerization with Docker</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Version Control Systems (e.g., Git)</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Agile and DevOps Practices</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevSecOps</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Microservices Architecture</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Disaster Recovery Planning</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevOps Culture and Team Collaboration</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevOps Metrics and KPIs</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevOps Automation</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevOps Tools and Ecosystem</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+
+                    <!-- Add more DevOps courses as needed -->
+                </div>
+            </div>
+            <div class="courses-section">
+                <h2>Cloud Computing</h2>
+                <div class="course-container">
+                    <div class="course">
+                        <h3>Cloud Fundamentals</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Advanced Cloud Architecture</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Serverless Computing</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>AWS Certified Solutions Architect</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Google Cloud Platform Essentials</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud Security and Compliance</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Multi-cloud Strategies</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud-based Big Data Analytics</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud Native Development</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud Governance and Best Practices</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Edge Computing and IoT</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud Cost Management</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud Monitoring and Performance Optimization</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>High Availability and Fault Tolerance</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>DevOps in Cloud Environments</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Kubernetes Administration</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <div class="course">
+                        <h3>Cloud Storage Solutions</h3>
+                        <p>Description of the course goes here. This course covers various topics.</p>
+                        <p class="price"><span class="original-price">₹4000</span><span class="discount">Now ₹2500</span></p>
+                        <span class="discount-offer">Limited Time Discount Offer!</span>
+                        <a href="#" class="enroll-button">Enroll Now</a>
+                    </div>
+                    <!-- Add more Cyber Security courses as needed -->
+                </div>
+            </div>
+             <div class="back-button">
+                <a href="about.html">Back</a>
+            </div>
+        </div>
+    </body>
+    </html>
